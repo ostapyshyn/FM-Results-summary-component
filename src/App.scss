@@ -1,3 +1,4 @@
+@import './index.scss';
 .App {
   display: flex;
   flex-direction: column;
@@ -8,4 +9,7 @@
   /* max-width: 500px;
   border: 1px solid mediumblue; */
   margin: auto;
+  @include mq(736px) {
+    height: auto;
+  }
 }

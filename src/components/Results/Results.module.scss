@@ -1,3 +1,4 @@
+@import '../../index.scss';
 .card {
   max-width: 736px;
   width: 100%;
@@ -6,6 +7,9 @@
   background: #ffffff;
   box-shadow: 0px 30px 60px rgba(61, 108, 236, 0.15);
   border-radius: 32px;
+  @include mq(736px) {
+    flex-direction: column;
+  }
   .result {
     background: linear-gradient(180deg, #7755ff 0%, #6943ff 0.01%, #2f2ce9 100%);
     border-radius: 32px;
@@ -14,6 +18,14 @@
     padding-bottom: 54px;
     padding-top: 39px;
     text-align: center;
+    @include mq(736px) {
+      flex-direction: column;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+      padding-inline: 53px;
+      padding-bottom: 40px;
+      padding-top: 24px;
+    }
     .point {
       background: linear-gradient(
         180deg,
@@ -30,6 +42,11 @@
       flex-direction: column;
       margin: 0 auto;
       margin-bottom: 28px;
+      @include mq(736px) {
+        height: 140px;
+        width: 140px;
+        margin-bottom: 24px;
+      }
       .mark {
         font-style: normal;
         font-weight: 800;
@@ -38,6 +55,10 @@
         text-align: center;
         color: #ffffff;
         margin-bottom: 4px;
+        @include mq(736px) {
+          font-size: 56px;
+          line-height: 72px;
+        }
       }
       span {
         font-style: normal;
@@ -47,6 +68,11 @@
         color: #cac9ff;
         mix-blend-mode: normal;
         opacity: 0.52;
+        @include mq(736px) {
+          font-size: 16px;
+          line-height: 21px;
+          opacity: 0.52;
+        }
       }
     }
 
@@ -58,6 +84,11 @@
       line-height: 23px;
       text-align: center;
       color: #cac9ff;
+      @include mq(736px) {
+        font-size: 16px;
+        line-height: 21px;
+        color: #cac9ff;
+      }
     }
     h1 {
       font-family: 'Hanken Grotesk';
@@ -67,6 +98,13 @@
       line-height: 31px;
       color: #cac9ff;
       margin-bottom: 35px;
+      @include mq(736px) {
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        color: #cac9ff;
+        margin-bottom: 24px;
+      }
     }
     h2 {
       font-family: 'Hanken Grotesk';
@@ -77,12 +115,20 @@
       text-align: center;
       color: #ffffff;
       margin-bottom: 14px;
+      @include mq(736px) {
+        font-size: 24px;
+        line-height: 31px;
+        margin-bottom: 8px;
+      }
     }
   }
   .summary {
     flex-basis: 50%;
     padding-inline: 40px;
     padding-top: 40px;
+    @include mq(736px) {
+      padding-bottom: 30px;
+    }
     .list {
       margin-bottom: 38px;
       display: flex;

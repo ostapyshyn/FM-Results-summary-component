@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import Results from './components/Results'
 
 function App() {
