@@ -127,6 +127,7 @@
     padding-inline: 40px;
     padding-top: 40px;
     @include mq(736px) {
+      padding-top: 24px;
       padding-bottom: 30px;
     }
     .list {
@@ -134,6 +135,9 @@
       display: flex;
       gap: 16px;
       flex-direction: column;
+      @include mq(736px) {
+        margin-bottom: 24px;
+      }
       .category {
         display: flex;
         align-items: center;
@@ -145,6 +149,10 @@
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
           #ff5555;
         border-radius: 12px;
+        @include mq(736px) {
+          font-size: 16px;
+          line-height: 21px;
+        }
 
         .images {
           display: inline-block;
@@ -160,6 +168,10 @@
             line-height: 23px;
             text-align: right;
             color: #303b59;
+            @include mq(736px) {
+              font-size: 16px;
+              line-height: 21px;
+            }
           }
           span {
             font-style: normal;
@@ -169,6 +181,10 @@
             text-align: right;
             color: #303b59;
             opacity: 0.5;
+            @include mq(736px) {
+              font-size: 16px;
+              line-height: 21px;
+            }
           }
         }
       }
@@ -182,6 +198,10 @@
       line-height: 31px;
       color: #303b59;
       margin-bottom: 28px;
+      @include mq(736px) {
+        font-size: 18px;
+        line-height: 23px;
+      }
     }
     button {
       background: #303b59;
@@ -196,6 +216,15 @@
       padding-block: 17px;
       width: 100%;
       text-align: center;
+      transition: filter 0.2s ease-in-out;
+      &:hover {
+        background: linear-gradient(180deg, #7755ff 0%, #6943ff 0.01%, #2f2ce9 100%);
+        border-radius: 128px;
+        cursor: pointer;
+      }
+      &:active {
+        transform: scale(0.98);
+      }
     }
   }
 }
